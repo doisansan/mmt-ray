@@ -2,6 +2,7 @@
 with open('source.csv',encoding='utf-8')as f:
     source= [s.strip() for s in f.readlines()]
 
+print(source)
 # 入力したキャラクターが存在するか否か
 def search():
     word = input("鬼滅の登場人物の名前を入力してください >>>") 
@@ -25,10 +26,6 @@ def search():
     
     with open(path_w, mode='w',encoding='utf-8') as f:
         f.write('\n'.join(source))
-
-    with open(path_w) as f:
-        print(f.read())
-        
+                
 if __name__ == "__main__":
     search()
-       
